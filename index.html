@@ -12,6 +12,47 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Styles pour les projets GitHub */
+        #github-projects .project {
+            max-width: 100%;
+            margin: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        #github-projects .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        #github-projects .project-info {
+            position: relative;
+            top: auto;
+            transform: none;
+            margin: 0;
+        }
+        
+        #github-projects .project-info a:hover {
+            background: #2c3e50;
+        }
+        
+        .badge {
+            display: inline-block;
+            font-size: 12px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            #github-projects .col-md-6 {
+                margin-bottom: 15px !important;
+            }
+        }
+        
+        /* Animation de chargement */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 
 <body>
@@ -173,6 +214,7 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
+                <!-- Projets mis en avant manuellement -->
                 <div class="project shadow-large">
                     <div class="project-image"><img src="images/project.jpg" alt="OWASP crAPI" /></div>
                     <div class="project-info">
@@ -192,6 +234,24 @@
                             Completed all WebGoat modules covering XSS, SQL Injection, JWT vulnerabilities, broken authentication, and others. Created automated scripts and manual exploitation proofs using Burp Suite and Python.
                         </p>
                         <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section pour les projets GitHub automatiques -->
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-12" style="text-align: center; margin-bottom: 30px;">
+                    <h3 style="color: #374054; font-size: 1.8em; font-weight: 300;">
+                        <i class="fa fa-github"></i> All My GitHub Projects
+                    </h3>
+                    <p style="color: #74808a; font-size: 0.9em; margin-top: 10px;">
+                        Explore my complete collection of projects across Cybersecurity, Development, and Hackathons
+                    </p>
+                </div>
+                <div id="github-projects" class="row" style="width: 100%;">
+                    <div style="text-align: center; width: 100%;">
+                        <i class="fa fa-spinner fa-spin" style="font-size: 2em; color: #3498db;"></i>
+                        <p style="margin-top: 10px; color: #74808a;">Loading GitHub projects...</p>
                     </div>
                 </div>
             </div>
@@ -250,7 +310,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

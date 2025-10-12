@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Windows Defender Bypass Technique - Hamza Zeroual</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <style>
+        .project-detail {
+            padding: 80px 15px 50px;
+            min-height: 100vh;
+        }
+        .project-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 50px;
+        }
+        .project-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .project-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .project-meta .badge {
+            padding: 8px 15px;
+            font-size: 14px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .back-button:hover {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            text-decoration: none;
+        }
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section-box {
+            background: #f8f9fa;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        .section-box h2 {
+            color: #374054;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .section-box h3 {
+            color: #374054;
+            font-size: 1.4em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .section-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .section-box ul li {
+            margin-bottom: 10px;
+            color: #74808a;
+        }
+        .section-box ul li:before {
+            content: "✓ ";
+            color: #2ecc71;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .tech-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+        .github-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #374054;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .github-link:hover {
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box strong {
+            color: #856404;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="project-header">
+        <div class="container">
+            <a href="../index.html#projects" class="back-button">
+                <i class="fa fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1><i class="fa fa-shield"></i> Windows Defender Bypass Technique</h1>
+            <p style="font-size: 1.2em; opacity: 0.9;">Advanced evasion techniques to bypass Windows Defender real-time protection</p>
+            
+            <div class="project-meta">
+                <span class="badge"><i class="fa fa-code"></i> C++</span>
+                <span class="badge"><i class="fa fa-calendar"></i> 2024-2025</span>
+                <span class="badge"><i class="fa fa-tag"></i> Cybersecurity</span>
+                <span class="badge"><i class="fa fa-star"></i> 1 Star</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <div class="container">
+            <div class="project-content">
+                <div class="warning-box">
+                    <strong><i class="fa fa-exclamation-triangle"></i> Educational Purpose Only</strong><br>
+                    This project is strictly for educational and research purposes. It demonstrates security concepts to help improve defensive capabilities.
+                </div>
+
+                <!-- Overview Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-info-circle"></i> Project Overview</h2>
+                    <p>
+                        This project explores advanced techniques to bypass Windows Defender's real-time protection mechanisms. 
+                        The research focuses on understanding how modern antivirus solutions detect malicious behavior and 
+                        developing methods to evade detection for security research and red team operations.
+                    </p>
+                    <p>
+                        The project demonstrates various evasion techniques including process injection, memory manipulation, 
+                        API hooking evasion, and obfuscation methods that can bypass heuristic and behavioral analysis engines.
+                    </p>
+                </div>
+
+                <!-- Technologies Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-wrench"></i> Technologies & Tools</h2>
+                    <div class="tech-stack">
+                        <span class="tech-badge">C++</span>
+                        <span class="tech-badge">Windows API</span>
+                        <span class="tech-badge">Assembly</span>
+                        <span class="tech-badge">PE Format</span>
+                        <span class="tech-badge">Process Injection</span>
+                        <span class="tech-badge">Obfuscation</span>
+                    </div>
+                </div>
+
+                <!-- Techniques Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-list"></i> Evasion Techniques Implemented</h2>
+                    <ul>
+                        <li>Process Hollowing - Replacing legitimate process memory with malicious code</li>
+                        <li>DLL Injection - Injecting code into running processes</li>
+                        <li>API Unhooking - Bypassing API monitoring hooks</li>
+                        <li>String Obfuscation - Hiding suspicious strings from static analysis</li>
+                        <li>Direct Syscalls - Bypassing user-mode API hooks</li>
+                        <li>ETW Patching - Disabling Event Tracing for Windows</li>
+                        <li>AMSI Bypass - Defeating Antimalware Scan Interface</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Details Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-cogs"></i> Technical Implementation</h2>
+                    
+                    <h3>Architecture</h3>
+                    <p>
+                        The bypass technique uses a multi-stage approach combining obfuscation, anti-analysis techniques, 
+                        and runtime evasion methods. The code is designed to minimize detection signatures and avoid 
+                        triggering behavioral analysis engines.
+                    </p>
+                    
+                    <h3>Key Components</h3>
+                    <ul>
+                        <li><strong>Loader:</strong> Initial stage that performs environment checks and unpacks the payload</li>
+                        <li><strong>Evasion Module:</strong> Handles detection avoidance and unhooking routines</li>
+                        <li><strong>Payload Injector:</strong> Injects and executes the final payload in target processes</li>
+                    </ul>
+
+                    <h3>Code Sample - AMSI Bypass</h3>
+                    <pre><code>// AMSI Bypass using memory patching
+BOOL BypassAMSI() {
+    HMODULE amsi = LoadLibraryA("amsi.dll");
+    LPVOID amsiScanBuffer = GetProcAddress(amsi, "AmsiScanBuffer");
+    
+    DWORD oldProtect;
+    VirtualProtect(amsiScanBuffer, 6, PAGE_EXECUTE_READWRITE, &oldProtect);
+    
+    // Patch with return 0 (AMSI_RESULT_CLEAN)
+    memcpy(amsiScanBuffer, "\xB8\x00\x00\x00\x00\xC3", 6);
+    
+    VirtualProtect(amsiScanBuffer, 6, oldProtect, &oldProtect);
+    return TRUE;
+}</code></pre>
+                </div>
+
+                <!-- Challenges Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-exclamation-triangle"></i> Challenges & Solutions</h2>
+                    
+                    <h3>Challenge 1: Kernel-Mode Callbacks</h3>
+                    <p>
+                        Windows Defender uses kernel-mode callbacks that are difficult to bypass from user-mode. 
+                        Solution: Implemented direct syscalls and timing-based evasion to avoid triggering callbacks.
+                    </p>
+                    
+                    <h3>Challenge 2: Behavioral Analysis</h3>
+                    <p>
+                        Modern AVs use machine learning for behavioral detection. 
+                        Solution: Implemented benign behavior patterns and sleep obfuscation to blend in with legitimate processes.
+                    </p>
+
+                    <h3>Challenge 3: Cloud-Based Detection</h3>
+                    <p>
+                        Windows Defender sends telemetry to cloud for analysis. 
+                        Solution: Network isolation techniques and signature randomization to avoid cloud detection.
+                    </p>
+                </div>
+
+                <!-- Learning Outcomes Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-graduation-cap"></i> Learning Outcomes</h2>
+                    <ul>
+                        <li>Deep understanding of Windows Defender architecture and detection mechanisms</li>
+                        <li>Advanced knowledge of Windows internals and PE file structure</li>
+                        <li>Experience with low-level programming and memory manipulation</li>
+                        <li>Understanding of modern AV/EDR evasion techniques</li>
+                        <li>Skills in reverse engineering and malware analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Defensive Recommendations Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-shield"></i> Defensive Recommendations</h2>
+                    <ul>
+                        <li>Enable and monitor Event Tracing for Windows (ETW)</li>
+                        <li>Implement application whitelisting and code signing policies</li>
+                        <li>Use EDR solutions with kernel-mode protection</li>
+                        <li>Monitor for suspicious process behavior and memory manipulation</li>
+                        <li>Keep Windows Defender and definitions up to date</li>
+                        <li>Implement network segmentation and endpoint isolation</li>
+                    </ul>
+                </div>
+
+                <!-- Links Section -->
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://github.com/HAMZAZEROUAL2001/WindowsDefenderBypasseTechnqueFirstBlog" target="_blank" class="github-link">
+                        <i class="fa fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; padding: 20px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p style="color: #74808a;">&copy; 2025 Hamza Zeroual - Cybersecurity Portfolio</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>

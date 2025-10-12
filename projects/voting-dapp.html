@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voting DApp Platform - Hamza Zeroual</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <style>
+        .project-detail { padding: 80px 15px 50px; min-height: 100vh; }
+        .project-header { background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); color: white; padding: 60px 0; margin-bottom: 50px; }
+        .project-header h1 { font-size: 2.5em; margin-bottom: 20px; font-weight: 300; }
+        .project-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        .project-meta .badge { padding: 8px 15px; font-size: 14px; background: rgba(255,255,255,0.2); border-radius: 20px; }
+        .back-button { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: rgba(255,255,255,0.2); color: white; text-decoration: none; border-radius: 4px; transition: background 0.3s; }
+        .back-button:hover { background: rgba(255,255,255,0.3); color: white; text-decoration: none; }
+        .project-content { max-width: 900px; margin: 0 auto; }
+        .section-box { background: #f8f9fa; padding: 30px; margin-bottom: 30px; border-radius: 8px; border-left: 4px solid #3498db; }
+        .section-box h2 { color: #374054; font-size: 1.8em; margin-bottom: 20px; font-weight: 300; }
+        .section-box h3 { color: #374054; font-size: 1.4em; margin-top: 20px; margin-bottom: 15px; font-weight: 400; }
+        .section-box ul { list-style: none; padding-left: 0; }
+        .section-box ul li { margin-bottom: 10px; color: #74808a; }
+        .section-box ul li:before { content: "✓ "; color: #2ecc71; font-weight: bold; margin-right: 10px; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .tech-badge { background: #3498db; color: white; padding: 8px 15px; border-radius: 4px; font-size: 14px; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 4px; overflow-x: auto; }
+        code { font-family: 'Courier New', monospace; }
+        .github-link { display: inline-block; padding: 15px 30px; background: #374054; color: white; text-decoration: none; border-radius: 4px; font-size: 16px; margin-top: 20px; transition: background 0.3s; }
+        .github-link:hover { background: #2c3e50; color: white; text-decoration: none; }
+    </style>
+</head>
+
+<body>
+    <div class="project-header">
+        <div class="container">
+            <a href="../index.html#projects" class="back-button">
+                <i class="fa fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1><i class="fa fa-check-square-o"></i> Decentralized Voting DApp</h1>
+            <p style="font-size: 1.2em; opacity: 0.9;">Blockchain-based secure and transparent voting platform</p>
+            
+            <div class="project-meta">
+                <span class="badge"><i class="fa fa-code"></i> JavaScript</span>
+                <span class="badge"><i class="fa fa-calendar"></i> 2024-2025</span>
+                <span class="badge"><i class="fa fa-tag"></i> Blockchain</span>
+                <span class="badge"><i class="fa fa-cube"></i> Web3</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <div class="container">
+            <div class="project-content">
+                <!-- Overview Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-info-circle"></i> Project Overview</h2>
+                    <p>
+                        This project is a decentralized voting application (DApp) built on blockchain technology to ensure 
+                        transparent, secure, and tamper-proof elections. By leveraging smart contracts on the Ethereum blockchain, 
+                        the platform eliminates the need for trusted third parties and provides verifiable voting records.
+                    </p>
+                    <p>
+                        The DApp addresses common issues in traditional voting systems such as fraud, lack of transparency, 
+                        and accessibility challenges. Every vote is recorded on the blockchain, making it immutable and publicly 
+                        auditable while maintaining voter privacy.
+                    </p>
+                </div>
+
+                <!-- Technologies Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-wrench"></i> Technology Stack</h2>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Solidity</span>
+                        <span class="tech-badge">Ethereum</span>
+                        <span class="tech-badge">Web3.js</span>
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">MetaMask</span>
+                        <span class="tech-badge">Truffle/Hardhat</span>
+                        <span class="tech-badge">IPFS</span>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-list"></i> Key Features</h2>
+                    <ul>
+                        <li>Decentralized voting with blockchain immutability</li>
+                        <li>Smart contract-based vote counting and validation</li>
+                        <li>MetaMask integration for user authentication</li>
+                        <li>Real-time vote tallying with transparent results</li>
+                        <li>Voter anonymity with cryptographic verification</li>
+                        <li>Admin panel for election management</li>
+                        <li>Candidate registration and profile management</li>
+                        <li>Vote verification and audit trail</li>
+                    </ul>
+                </div>
+
+                <!-- Architecture Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-sitemap"></i> System Architecture</h2>
+                    
+                    <h3>Smart Contract Layer</h3>
+                    <p>
+                        The core voting logic is implemented in Solidity smart contracts deployed on the Ethereum blockchain. 
+                        Smart contracts handle:
+                    </p>
+                    <ul>
+                        <li>Voter registration and verification</li>
+                        <li>Candidate registration</li>
+                        <li>Vote casting and validation</li>
+                        <li>Vote counting and result calculation</li>
+                        <li>Election state management (open/closed)</li>
+                    </ul>
+
+                    <h3>Frontend Application</h3>
+                    <p>
+                        Built with React.js, the frontend provides an intuitive interface for users to interact with the 
+                        blockchain. Web3.js enables communication between the browser and the Ethereum network.
+                    </p>
+
+                    <h3>Decentralized Storage</h3>
+                    <p>
+                        IPFS (InterPlanetary File System) stores candidate information, election details, and other metadata 
+                        in a decentralized manner, reducing reliance on centralized servers.
+                    </p>
+                </div>
+
+                <!-- Smart Contract Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-file-code-o"></i> Smart Contract Implementation</h2>
+                    
+                    <h3>Core Voting Contract</h3>
+                    <pre><code>// Simplified Solidity contract example
+pragma solidity ^0.8.0;
+
+contract VotingSystem {
+    struct Candidate {
+        uint id;
+        string name;
+        uint voteCount;
+    }
+    
+    mapping(uint => Candidate) public candidates;
+    mapping(address => bool) public hasVoted;
+    uint public candidatesCount;
+    
+    event VoteCast(uint indexed candidateId, address indexed voter);
+    
+    function addCandidate(string memory _name) public {
+        candidatesCount++;
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
+    }
+    
+    function vote(uint _candidateId) public {
+        require(!hasVoted[msg.sender], "Already voted");
+        require(_candidateId > 0 && _candidateId <= candidatesCount, "Invalid candidate");
+        
+        hasVoted[msg.sender] = true;
+        candidates[_candidateId].voteCount++;
+        
+        emit VoteCast(_candidateId, msg.sender);
+    }
+}</code></pre>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-thumbs-up"></i> Benefits of Blockchain Voting</h2>
+                    
+                    <h3>Transparency</h3>
+                    <p>
+                        All votes are recorded on a public ledger, allowing anyone to verify the election results without 
+                        compromising voter privacy.
+                    </p>
+
+                    <h3>Immutability</h3>
+                    <p>
+                        Once a vote is cast, it cannot be altered or deleted, preventing tampering and ensuring data integrity.
+                    </p>
+
+                    <h3>Accessibility</h3>
+                    <p>
+                        Voters can participate from anywhere with an internet connection, reducing geographical barriers 
+                        and increasing participation.
+                    </p>
+
+                    <h3>Cost Efficiency</h3>
+                    <p>
+                        Eliminates the need for physical polling stations, paper ballots, and manual counting, reducing 
+                        administrative costs.
+                    </p>
+
+                    <h3>Trust Minimization</h3>
+                    <p>
+                        No need to trust election officials or centralized authorities—the code and blockchain ensure 
+                        fairness automatically.
+                    </p>
+                </div>
+
+                <!-- Challenges Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-exclamation-triangle"></i> Challenges & Solutions</h2>
+                    
+                    <h3>Challenge: Gas Fees</h3>
+                    <p>
+                        <strong>Problem:</strong> Ethereum transaction fees can be high during network congestion.<br>
+                        <strong>Solution:</strong> Implemented batch processing and optimized smart contract functions to 
+                        minimize gas consumption. Considering Layer 2 solutions for future versions.
+                    </p>
+
+                    <h3>Challenge: User Adoption</h3>
+                    <p>
+                        <strong>Problem:</strong> Many users are unfamiliar with cryptocurrency wallets and blockchain.<br>
+                        <strong>Solution:</strong> Created comprehensive tutorials, simplified the UI, and provided MetaMask 
+                        setup guides.
+                    </p>
+
+                    <h3>Challenge: Voter Privacy</h3>
+                    <p>
+                        <strong>Problem:</strong> Balancing transparency with anonymity on a public blockchain.<br>
+                        <strong>Solution:</strong> Implemented zero-knowledge proofs and commit-reveal schemes to verify 
+                        votes without exposing voter identity.
+                    </p>
+                </div>
+
+                <!-- Future Improvements Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-rocket"></i> Future Enhancements</h2>
+                    <ul>
+                        <li>Multi-signature admin controls for decentralized governance</li>
+                        <li>Layer 2 scaling solutions (Polygon, Optimism) for reduced fees</li>
+                        <li>Mobile app for iOS and Android</li>
+                        <li>Integration with decentralized identity solutions (DID)</li>
+                        <li>Support for ranked-choice voting</li>
+                        <li>Real-time analytics dashboard</li>
+                        <li>Multi-language support for global accessibility</li>
+                    </ul>
+                </div>
+
+                <!-- Learning Outcomes Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-graduation-cap"></i> Learning Outcomes</h2>
+                    <ul>
+                        <li>Deep understanding of blockchain technology and smart contracts</li>
+                        <li>Proficiency in Solidity and Web3 development</li>
+                        <li>Experience with decentralized application architecture</li>
+                        <li>Knowledge of cryptographic principles (hashing, signatures)</li>
+                        <li>Frontend-blockchain integration using Web3.js</li>
+                        <li>Smart contract security best practices</li>
+                        <li>Understanding of consensus mechanisms and gas optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Links Section -->
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://github.com/HAMZAZEROUAL2001/voting-dapp-platform" target="_blank" class="github-link">
+                        <i class="fa fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; padding: 20px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p style="color: #74808a;">&copy; 2025 Hamza Zeroual - Blockchain Portfolio</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>

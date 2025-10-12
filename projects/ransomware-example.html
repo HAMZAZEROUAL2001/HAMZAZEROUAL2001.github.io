@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Ransomware Example - Hamza Zeroual</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <style>
+        .project-detail { padding: 80px 15px 50px; min-height: 100vh; }
+        .project-header { background: linear-gradient(135deg, #c0392b 0%, #8e44ad 100%); color: white; padding: 60px 0; margin-bottom: 50px; }
+        .project-header h1 { font-size: 2.5em; margin-bottom: 20px; font-weight: 300; }
+        .project-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        .project-meta .badge { padding: 8px 15px; font-size: 14px; background: rgba(255,255,255,0.2); border-radius: 20px; }
+        .back-button { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: rgba(255,255,255,0.2); color: white; text-decoration: none; border-radius: 4px; transition: background 0.3s; }
+        .back-button:hover { background: rgba(255,255,255,0.3); color: white; text-decoration: none; }
+        .project-content { max-width: 900px; margin: 0 auto; }
+        .section-box { background: #f8f9fa; padding: 30px; margin-bottom: 30px; border-radius: 8px; border-left: 4px solid #c0392b; }
+        .section-box h2 { color: #374054; font-size: 1.8em; margin-bottom: 20px; font-weight: 300; }
+        .section-box h3 { color: #374054; font-size: 1.4em; margin-top: 20px; margin-bottom: 15px; font-weight: 400; }
+        .section-box ul { list-style: none; padding-left: 0; }
+        .section-box ul li { margin-bottom: 10px; color: #74808a; }
+        .section-box ul li:before { content: "✓ "; color: #2ecc71; font-weight: bold; margin-right: 10px; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .tech-badge { background: #c0392b; color: white; padding: 8px 15px; border-radius: 4px; font-size: 14px; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 4px; overflow-x: auto; }
+        code { font-family: 'Courier New', monospace; }
+        .github-link { display: inline-block; padding: 15px 30px; background: #374054; color: white; text-decoration: none; border-radius: 4px; font-size: 16px; margin-top: 20px; transition: background 0.3s; }
+        .github-link:hover { background: #2c3e50; color: white; text-decoration: none; }
+        .warning-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 4px; }
+        .warning-box strong { color: #856404; }
+        .danger-box { background: #f8d7da; border-left: 4px solid #dc3545; padding: 20px; margin: 20px 0; border-radius: 4px; }
+        .danger-box strong { color: #721c24; }
+    </style>
+</head>
+
+<body>
+    <div class="project-header">
+        <div class="container">
+            <a href="../index.html#projects" class="back-button">
+                <i class="fa fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1><i class="fa fa-lock"></i> Simple Ransomware Example</h1>
+            <p style="font-size: 1.2em; opacity: 0.9;">Educational demonstration of ransomware functionality for cybersecurity research</p>
+            
+            <div class="project-meta">
+                <span class="badge"><i class="fa fa-code"></i> C</span>
+                <span class="badge"><i class="fa fa-calendar"></i> 2024</span>
+                <span class="badge"><i class="fa fa-tag"></i> Malware Research</span>
+                <span class="badge"><i class="fa fa-book"></i> Educational</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <div class="container">
+            <div class="project-content">
+                <div class="danger-box">
+                    <strong><i class="fa fa-exclamation-triangle"></i> STRICTLY EDUCATIONAL PURPOSE</strong><br>
+                    This project is ONLY for educational purposes, security research, and learning about cybersecurity threats. 
+                    Any malicious use is strictly prohibited and illegal. Use only in isolated, controlled environments.
+                </div>
+
+                <!-- Overview Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-info-circle"></i> Project Overview</h2>
+                    <p>
+                        This educational project demonstrates how ransomware works at a fundamental level. It's designed 
+                        to help security researchers, students, and professionals understand the mechanics behind ransomware 
+                        attacks to better defend against them.
+                    </p>
+                    <p>
+                        The project implements basic file encryption, ransom note generation, and key management, 
+                        showing how attackers can encrypt user data and demand payment for decryption. This knowledge 
+                        is crucial for developing effective detection and prevention strategies.
+                    </p>
+                </div>
+
+                <!-- Technologies Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-wrench"></i> Technologies & Algorithms</h2>
+                    <div class="tech-stack">
+                        <span class="tech-badge">C Programming</span>
+                        <span class="tech-badge">AES Encryption</span>
+                        <span class="tech-badge">File I/O</span>
+                        <span class="tech-badge">Cryptography</span>
+                        <span class="tech-badge">Windows API</span>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-list"></i> Implemented Features</h2>
+                    <ul>
+                        <li>File encryption using AES-256 algorithm</li>
+                        <li>Recursive directory traversal for file discovery</li>
+                        <li>File extension targeting (documents, images, databases)</li>
+                        <li>Ransom note generation and placement</li>
+                        <li>Encryption key generation and management</li>
+                        <li>File integrity verification before encryption</li>
+                        <li>Decryption functionality for research purposes</li>
+                    </ul>
+                </div>
+
+                <!-- How It Works Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-gears"></i> How Ransomware Works</h2>
+                    
+                    <h3>1. Initialization Phase</h3>
+                    <p>
+                        The program generates a cryptographically secure encryption key using a random number generator. 
+                        This key is used for all file encryption operations.
+                    </p>
+
+                    <h3>2. File Discovery</h3>
+                    <p>
+                        The ransomware recursively scans directories to identify target files based on extensions 
+                        (.docx, .pdf, .jpg, .png, .db, etc.). It builds a list of files to encrypt.
+                    </p>
+
+                    <h3>3. Encryption Process</h3>
+                    <p>
+                        Each target file is encrypted using AES-256 in CBC mode. The original file is overwritten 
+                        with encrypted data, and the file extension is changed (e.g., .docx.encrypted).
+                    </p>
+
+                    <h3>4. Ransom Note Deployment</h3>
+                    <p>
+                        A ransom note text file is created in each affected directory, informing the "victim" 
+                        of the encryption and providing instructions (in a real attack, this would include payment details).
+                    </p>
+
+                    <h3>Code Example - File Encryption</h3>
+                    <pre><code>// Simplified encryption function
+void encryptFile(const char* filename, const unsigned char* key) {
+    FILE *inFile = fopen(filename, "rb");
+    FILE *outFile = fopen(tempfile, "wb");
+    
+    // Initialize AES context
+    AES_KEY aesKey;
+    AES_set_encrypt_key(key, 256, &aesKey);
+    
+    unsigned char buffer[AES_BLOCK_SIZE];
+    unsigned char encrypted[AES_BLOCK_SIZE];
+    size_t bytesRead;
+    
+    // Encrypt file block by block
+    while ((bytesRead = fread(buffer, 1, AES_BLOCK_SIZE, inFile)) > 0) {
+        AES_encrypt(buffer, encrypted, &aesKey);
+        fwrite(encrypted, 1, AES_BLOCK_SIZE, outFile);
+    }
+    
+    fclose(inFile);
+    fclose(outFile);
+    
+    // Replace original with encrypted
+    remove(filename);
+    rename(tempfile, strcat(filename, ".encrypted"));
+}</code></pre>
+                </div>
+
+                <!-- Attack Chain Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-chain"></i> Typical Ransomware Attack Chain</h2>
+                    <ul>
+                        <li><strong>Initial Access:</strong> Phishing email, malicious download, or exploit</li>
+                        <li><strong>Execution:</strong> Malware runs with user privileges</li>
+                        <li><strong>Persistence:</strong> Creates registry keys or scheduled tasks</li>
+                        <li><strong>Defense Evasion:</strong> Disables antivirus, deletes shadow copies</li>
+                        <li><strong>Discovery:</strong> Scans for valuable files and network shares</li>
+                        <li><strong>Encryption:</strong> Encrypts files using strong cryptography</li>
+                        <li><strong>Ransom Demand:</strong> Displays note and demands payment</li>
+                    </ul>
+                </div>
+
+                <!-- Defense Mechanisms Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-shield"></i> Defense & Prevention Strategies</h2>
+                    
+                    <h3>Preventive Measures</h3>
+                    <ul>
+                        <li><strong>Regular Backups:</strong> Maintain offline, encrypted backups (3-2-1 rule)</li>
+                        <li><strong>Email Filtering:</strong> Block suspicious attachments and links</li>
+                        <li><strong>User Training:</strong> Educate users about phishing and social engineering</li>
+                        <li><strong>Patch Management:</strong> Keep systems and software up to date</li>
+                        <li><strong>Least Privilege:</strong> Limit user permissions and access</li>
+                        <li><strong>Network Segmentation:</strong> Isolate critical systems</li>
+                    </ul>
+
+                    <h3>Detection Techniques</h3>
+                    <ul>
+                        <li>Monitor for suspicious file modification patterns</li>
+                        <li>Detect rapid, sequential file access across directories</li>
+                        <li>Identify processes performing encryption operations</li>
+                        <li>Monitor for volume shadow copy deletion</li>
+                        <li>Analyze network traffic for C2 communications</li>
+                        <li>Use behavioral analysis and machine learning</li>
+                    </ul>
+
+                    <h3>Response Actions</h3>
+                    <ul>
+                        <li>Immediately disconnect affected systems from network</li>
+                        <li>Identify and isolate patient zero</li>
+                        <li>Preserve forensic evidence (memory dumps, logs)</li>
+                        <li>Contact law enforcement and cybersecurity experts</li>
+                        <li>DO NOT pay ransom (no guarantee of decryption)</li>
+                        <li>Restore from backups after thorough system cleaning</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Analysis Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-microscope"></i> Technical Analysis</h2>
+                    
+                    <h3>Encryption Analysis</h3>
+                    <p>
+                        This implementation uses AES-256, which is a symmetric encryption algorithm considered 
+                        cryptographically secure. Without the encryption key, decryption is computationally infeasible 
+                        (would take billions of years with current technology).
+                    </p>
+
+                    <h3>Key Management</h3>
+                    <p>
+                        In real ransomware, the symmetric key is typically encrypted with the attacker's public RSA key 
+                        before being sent to a command-and-control server. This prevents reverse engineering of the key 
+                        from the malware binary.
+                    </p>
+
+                    <h3>File System Impact</h3>
+                    <p>
+                        The ransomware overwrites original files, making recovery without the key nearly impossible. 
+                        Advanced variants also delete shadow copies and disable system restore to prevent recovery.
+                    </p>
+                </div>
+
+                <!-- Learning Outcomes Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-graduation-cap"></i> Learning Outcomes</h2>
+                    <ul>
+                        <li>Understanding of cryptographic algorithms and their application</li>
+                        <li>Knowledge of file system operations and recursive directory traversal</li>
+                        <li>Insight into malware behavior and attack patterns</li>
+                        <li>Experience with C programming and Windows API</li>
+                        <li>Awareness of ransomware defense and mitigation strategies</li>
+                        <li>Understanding of incident response procedures</li>
+                    </ul>
+                </div>
+
+                <!-- Ethical Considerations Section -->
+                <div class="section-box">
+                    <h2><i class="fa fa-balance-scale"></i> Ethical Considerations</h2>
+                    <p>
+                        This project was developed with strict ethical guidelines:
+                    </p>
+                    <ul>
+                        <li>Only for educational and research purposes in controlled environments</li>
+                        <li>Never to be used maliciously or distributed</li>
+                        <li>Tested only on isolated virtual machines with non-production data</li>
+                        <li>Designed to teach defensive cybersecurity, not offensive attacks</li>
+                        <li>Shared publicly to promote transparency and defensive research</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <strong><i class="fa fa-info-circle"></i> Disclaimer</strong><br>
+                    The author takes no responsibility for any misuse of this code. This is purely educational material 
+                    for understanding cybersecurity threats and developing better defenses.
+                </div>
+
+                <!-- Links Section -->
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://github.com/HAMZAZEROUAL2001/Simple-Ransomware-Example" target="_blank" class="github-link">
+                        <i class="fa fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; padding: 20px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p style="color: #74808a;">&copy; 2025 Hamza Zeroual - Cybersecurity Research</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>

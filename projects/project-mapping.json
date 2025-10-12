@@ -1,0 +1,44 @@
+{
+  "projects": {
+    "WindowsDefenderBypasseTechnqueFirstBlog": {
+      "detailPage": "windows-defender-bypass.html",
+      "hasDetailPage": true,
+      "category": "cybersecurity"
+    },
+    "anti-VM-technique": {
+      "detailPage": "anti-vm-technique.html",
+      "hasDetailPage": true,
+      "category": "cybersecurity"
+    },
+    "Simple-Ransomware-Example": {
+      "detailPage": "ransomware-example.html",
+      "hasDetailPage": true,
+      "category": "cybersecurity"
+    },
+    "AntiDBG-techniques": {
+      "detailPage": null,
+      "hasDetailPage": false,
+      "category": "cybersecurity"
+    },
+    "windows-internals-cours-and-exercice": {
+      "detailPage": null,
+      "hasDetailPage": false,
+      "category": "cybersecurity"
+    },
+    "DEVJAM_code_crackers": {
+      "detailPage": "devjam-code-crackers.html",
+      "hasDetailPage": true,
+      "category": "devjam"
+    },
+    "DEVJEM_code_crackers-": {
+      "detailPage": "devjam-code-crackers.html",
+      "hasDetailPage": true,
+      "category": "devjam"
+    },
+    "voting-dapp-platform": {
+      "detailPage": "voting-dapp.html",
+      "hasDetailPage": true,
+      "category": "development"
+    }
+  }
+}
