@@ -1,0 +1,38 @@
+{
+    "anti-VM-technique": {
+        "description": "Advanced Virtual Machine and Hypervisor Detection techniques. Detects if code is running inside a VM or on a physical host machine using various detection methods."
+    },
+    "AntiDBG-techniques": {
+        "description": "Collection of Anti-Debugging techniques to detect and prevent debugger attachment. Implements various methods to identify debugging environments."
+    },
+    "Simple-Ransomware-Example": {
+        "description": "Educational ransomware example demonstrating encryption mechanisms. Created strictly for cybersecurity research and learning purposes."
+    },
+    "WindowsDefenderBypasseTechnqueFirstBlog": {
+        "description": "AMSI Bypass techniques in C++. Demonstrates methods to evade Windows Antimalware Scan Interface (AMSI) through memory patching of AmsiScanBuffer function."
+    },
+    "windows-internals-cours-and-exercice": {
+        "description": "Windows Internals course materials and practical exercises. Covers low-level Windows system programming concepts and implementations."
+    },
+    "Windows-System-Programming": {
+        "description": "Windows System Programming projects and examples. Deep dive into Windows API, kernel-mode programming, and system-level operations."
+    },
+    "DEVJAM_code_crackers": {
+        "description": "DevJam Code Crackers competition project. Team-based coding challenge solution demonstrating problem-solving and algorithmic skills."
+    },
+    "DEVJEM_code_crackers-": {
+        "description": "IT DevJam competition entry. Collaborative development project showcasing innovative solutions for competition challenges."
+    },
+    "voting-dapp-platform": {
+        "description": "Decentralized Voting Platform built with Solidity and React. Secure blockchain-based voting system leveraging Ethereum smart contracts for transparent elections."
+    },
+    "library-management-system": {
+        "description": "Library Management System with Python. Complete CRUD application for managing books, members, and library operations with database integration."
+    },
+    "operating-systemTP": {
+        "description": "Operating System practical exercises focusing on processes and threads. Implementations of concurrent programming concepts and synchronization mechanisms."
+    },
+    "JavaExerciceCoursera": {
+        "description": "Java programming exercises from Coursera courses. Collection of object-oriented programming challenges and solutions."
+    }
+}

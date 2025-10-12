@@ -102,9 +102,15 @@
         const username = 'HAMZAZEROUAL2001';
         const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`;
         
-        fetch(apiUrl)
+        // Charger les descriptions personnalisées
+        fetch('js/project-descriptions.json')
             .then(response => response.json())
-            .then(repos => {
+            .then(projectDescriptions => {
+                return fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(repos => ({ repos, projectDescriptions }));
+            })
+            .then(({ repos, projectDescriptions }) => {
                 const githubProjectsContainer = $('#github-projects');
                 githubProjectsContainer.empty();
                 
@@ -177,6 +183,10 @@
                     const hasDetailPage = projectPages[repo.name] !== undefined;
                     const detailPageUrl = hasDetailPage ? `projects/${projectPages[repo.name]}` : null;
                     
+                    // Utiliser la description personnalisée si disponible
+                    const customDescription = projectDescriptions[repo.name];
+                    const description = customDescription ? customDescription.description : (repo.description || 'No description available');
+                    
                     return `
                         <div class="col-md-6 col-lg-4" style="margin-bottom: 20px;">
                             <div class="project shadow-large" style="height: 100%; display: flex; flex-direction: column;">
@@ -190,7 +200,7 @@
                                         <i class="fa fa-github"></i> ${repo.name}
                                     </h3>
                                     <p style="font-size: 13px; min-height: 60px; color: #74808a; flex-grow: 1;">
-                                        ${repo.description || 'No description available'}
+                                        ${description}
                                     </p>
                                     <div style="margin-top: 10px;">
                                         ${repo.language ? `<span class="badge" style="background: #2ecc71; color: white; padding: 3px 8px; border-radius: 3px; margin-right: 5px; font-size: 11px;">${repo.language}</span>` : ''}
