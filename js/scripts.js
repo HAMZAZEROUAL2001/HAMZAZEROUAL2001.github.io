@@ -188,35 +188,35 @@
                     const description = customDescription ? customDescription.description : (repo.description || 'No description available');
                     
                     return `
-                        <div class="col-md-6 col-lg-4" style="margin-bottom: 20px;">
-                            <div class="project shadow-large" style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="project-info" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
-                                    <div style="margin-bottom: 10px;">
-                                        <span class="badge" style="background: ${categoryColors[category]}; color: white; padding: 4px 8px; border-radius: 3px; font-size: 11px;">
+                        <div class="col-md-6 col-lg-4" style="margin-bottom: 30px;">
+                            <div class="project shadow-large" style="height: 100%; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; background: #fff;">
+                                <div class="project-info" style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                                    <div style="margin-bottom: 12px;">
+                                        <span class="badge" style="background: ${categoryColors[category]}; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase;">
                                             <i class="fa ${categoryIcons[category]}"></i> ${categoryLabels[category]}
                                         </span>
                                     </div>
-                                    <h3 style="font-size: 17px; margin-bottom: 10px; font-weight: 500;">
-                                        <i class="fa fa-github"></i> ${repo.name}
+                                    <h3 style="font-size: 18px; margin: 0 0 12px 0; font-weight: 600; color: #2c3e50; line-height: 1.3;">
+                                        ${repo.name.replace(/-/g, ' ').replace(/_/g, ' ')}
                                     </h3>
-                                    <p style="font-size: 13px; min-height: 60px; color: #74808a; flex-grow: 1;">
+                                    <p style="font-size: 14px; min-height: 80px; color: #7f8c8d; flex-grow: 1; line-height: 1.6; margin-bottom: 15px;">
                                         ${description}
                                     </p>
-                                    <div style="margin-top: 10px;">
-                                        ${repo.language ? `<span class="badge" style="background: #2ecc71; color: white; padding: 3px 8px; border-radius: 3px; margin-right: 5px; font-size: 11px;">${repo.language}</span>` : ''}
-                                        <span style="font-size: 12px; color: #999;">
+                                    <div style="margin-bottom: 15px; padding-top: 10px; border-top: 1px solid #ecf0f1;">
+                                        ${repo.language ? `<span class="badge" style="background: #27ae60; color: white; padding: 4px 10px; border-radius: 12px; margin-right: 8px; font-size: 11px;"><i class="fa fa-circle"></i> ${repo.language}</span>` : ''}
+                                        <span style="font-size: 12px; color: #95a5a6;">
                                             <i class="fa fa-star" style="color: #f39c12;"></i> ${repo.stargazers_count} 
-                                            <i class="fa fa-code-fork" style="margin-left: 10px;"></i> ${repo.forks_count}
+                                            <i class="fa fa-code-fork" style="margin-left: 8px; color: #3498db;"></i> ${repo.forks_count}
                                         </span>
                                     </div>
-                                    <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto;">
                                         ${hasDetailPage ? `
-                                        <a href="${detailPageUrl}" style="display: inline-block; padding: 8px 15px; background: ${categoryColors[category]}; color: white; text-decoration: none; border-radius: 4px; font-size: 13px; transition: background 0.3s;">
+                                        <a href="${detailPageUrl}" style="flex: 1; min-width: 120px; display: inline-block; padding: 10px 16px; background: ${categoryColors[category]}; color: white; text-decoration: none; border-radius: 6px; font-size: 13px; text-align: center; transition: all 0.3s; font-weight: 500;">
                                             <i class="fa fa-info-circle"></i> View Details
                                         </a>
                                         ` : ''}
-                                        <a href="${repo.html_url}" target="_blank" style="display: inline-block; padding: 8px 15px; background: #374054; color: white; text-decoration: none; border-radius: 4px; font-size: 13px; transition: background 0.3s;">
-                                            <i class="fa fa-github"></i> GitHub <i class="fa fa-external-link"></i>
+                                        <a href="${repo.html_url}" target="_blank" style="flex: 1; min-width: 120px; display: inline-block; padding: 10px 16px; background: #34495e; color: white; text-decoration: none; border-radius: 6px; font-size: 13px; text-align: center; transition: all 0.3s; font-weight: 500;">
+                                            <i class="fa fa-github"></i> GitHub <i class="fa fa-external-link" style="font-size: 10px;"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -227,21 +227,21 @@
                 
                 // Afficher les repos par catégorie
                 if (categorizedRepos.cybersecurity.length > 0) {
-                    githubProjectsContainer.append('<div class="col-12" style="margin-top: 20px; margin-bottom: 15px;"><h4 style="color: #e74c3c; border-bottom: 2px solid #e74c3c; padding-bottom: 5px;"><i class="fa fa-shield"></i> Cybersecurity Projects</h4></div>');
+                    githubProjectsContainer.append('<div class="col-12" style="margin: 40px 0 25px 0; clear: both;"><h3 style="color: #e74c3c; font-size: 26px; font-weight: 600; border-bottom: 3px solid #e74c3c; padding-bottom: 12px; display: inline-block;"><i class="fa fa-shield" style="margin-right: 10px;"></i> Cybersecurity Projects</h3></div>');
                     categorizedRepos.cybersecurity.forEach(repo => {
                         githubProjectsContainer.append(createProjectCard(repo, 'cybersecurity'));
                     });
                 }
                 
                 if (categorizedRepos.devjam.length > 0) {
-                    githubProjectsContainer.append('<div class="col-12" style="margin-top: 20px; margin-bottom: 15px;"><h4 style="color: #9b59b6; border-bottom: 2px solid #9b59b6; padding-bottom: 5px;"><i class="fa fa-gamepad"></i> DEV JAM Projects</h4></div>');
+                    githubProjectsContainer.append('<div class="col-12" style="margin: 40px 0 25px 0; clear: both;"><h3 style="color: #9b59b6; font-size: 26px; font-weight: 600; border-bottom: 3px solid #9b59b6; padding-bottom: 12px; display: inline-block;"><i class="fa fa-gamepad" style="margin-right: 10px;"></i> DEV JAM Projects</h3></div>');
                     categorizedRepos.devjam.forEach(repo => {
                         githubProjectsContainer.append(createProjectCard(repo, 'devjam'));
                     });
                 }
                 
                 if (categorizedRepos.development.length > 0) {
-                    githubProjectsContainer.append('<div class="col-12" style="margin-top: 20px; margin-bottom: 15px;"><h4 style="color: #3498db; border-bottom: 2px solid #3498db; padding-bottom: 5px;"><i class="fa fa-code"></i> Development Projects</h4></div>');
+                    githubProjectsContainer.append('<div class="col-12" style="margin: 40px 0 25px 0; clear: both;"><h3 style="color: #3498db; font-size: 26px; font-weight: 600; border-bottom: 3px solid #3498db; padding-bottom: 12px; display: inline-block;"><i class="fa fa-code" style="margin-right: 10px;"></i> Development Projects</h3></div>');
                     categorizedRepos.development.forEach(repo => {
                         githubProjectsContainer.append(createProjectCard(repo, 'development'));
                     });
