@@ -158,6 +158,12 @@
                         development: '#3498db'
                     };
                     
+                    const categoryGradients = {
+                        cybersecurity: 'linear-gradient(135deg, #e74c3c, #c0392b)',
+                        devjam: 'linear-gradient(135deg, #9b59b6, #8e44ad)',
+                        development: 'linear-gradient(135deg, #3498db, #2980b9)'
+                    };
+                    
                     const categoryIcons = {
                         cybersecurity: 'fa-shield',
                         devjam: 'fa-gamepad',
@@ -189,36 +195,39 @@
                     
                     return `
                         <div class="col-md-6 col-lg-4" style="margin-bottom: 30px;">
-                            <div class="project shadow-large" style="height: 100%; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; background: #fff;">
-                                <div class="project-info" style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
-                                    <div style="margin-bottom: 12px;">
-                                        <span class="badge" style="background: ${categoryColors[category]}; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase;">
-                                            <i class="fa ${categoryIcons[category]}"></i> ${categoryLabels[category]}
-                                        </span>
+                            <div style="padding: 25px; background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); height: 100%; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <div style="text-align: center; margin-bottom: 20px;">
+                                    <div style="width: 80px; height: 80px; margin: 0 auto 15px; background: ${categoryGradients[category]}; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                        <i class="fa ${categoryIcons[category]}" style="font-size: 40px; color: white;"></i>
                                     </div>
-                                    <h3 style="font-size: 18px; margin: 0 0 12px 0; font-weight: 600; color: #2c3e50; line-height: 1.3;">
-                                        ${repo.name.replace(/-/g, ' ').replace(/_/g, ' ')}
-                                    </h3>
-                                    <p style="font-size: 14px; min-height: 80px; color: #7f8c8d; flex-grow: 1; line-height: 1.6; margin-bottom: 15px;">
+                                    <span style="background: ${categoryGradients[category]}; color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase; display: inline-block;">
+                                        ${categoryLabels[category]}
+                                    </span>
+                                </div>
+                                <h3 style="font-size: 18px; margin: 0 0 15px 0; font-weight: 600; color: #2c3e50; line-height: 1.4; text-align: center; min-height: 50px;">
+                                    ${repo.name.replace(/-/g, ' ').replace(/_/g, ' ')}
+                                </h3>
+                                <div style="flex-grow: 1; padding: 15px 0; border-top: 2px solid #ecf0f1; border-bottom: 2px solid #ecf0f1;">
+                                    <p style="font-size: 13px; color: #7f8c8d; line-height: 1.6; margin-bottom: 12px; min-height: 75px;">
                                         ${description}
                                     </p>
-                                    <div style="margin-bottom: 15px; padding-top: 10px; border-top: 1px solid #ecf0f1;">
-                                        ${repo.language ? `<span class="badge" style="background: #27ae60; color: white; padding: 4px 10px; border-radius: 12px; margin-right: 8px; font-size: 11px;"><i class="fa fa-circle"></i> ${repo.language}</span>` : ''}
-                                        <span style="font-size: 12px; color: #95a5a6;">
+                                    <div style="text-align: center; margin-top: 12px;">
+                                        ${repo.language ? `<span style="background: #27ae60; color: white; padding: 5px 12px; border-radius: 15px; margin-right: 8px; font-size: 11px; display: inline-block;"><i class="fa fa-circle" style="font-size: 8px;"></i> ${repo.language}</span>` : ''}
+                                        <span style="font-size: 12px; color: #95a5a6; display: inline-block;">
                                             <i class="fa fa-star" style="color: #f39c12;"></i> ${repo.stargazers_count} 
                                             <i class="fa fa-code-fork" style="margin-left: 8px; color: #3498db;"></i> ${repo.forks_count}
                                         </span>
                                     </div>
-                                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto;">
-                                        ${hasDetailPage ? `
-                                        <a href="${detailPageUrl}" style="flex: 1; min-width: 120px; display: inline-block; padding: 10px 16px; background: ${categoryColors[category]}; color: white; text-decoration: none; border-radius: 6px; font-size: 13px; text-align: center; transition: all 0.3s; font-weight: 500;">
-                                            <i class="fa fa-info-circle"></i> View Details
-                                        </a>
-                                        ` : ''}
-                                        <a href="${repo.html_url}" target="_blank" style="flex: 1; min-width: 120px; display: inline-block; padding: 10px 16px; background: #34495e; color: white; text-decoration: none; border-radius: 6px; font-size: 13px; text-align: center; transition: all 0.3s; font-weight: 500;">
-                                            <i class="fa fa-github"></i> GitHub <i class="fa fa-external-link" style="font-size: 10px;"></i>
-                                        </a>
-                                    </div>
+                                </div>
+                                <div style="text-align: center; margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+                                    ${hasDetailPage ? `
+                                    <a href="${detailPageUrl}" style="flex: 1; display: inline-block; padding: 12px 20px; background: ${categoryGradients[category]}; color: white; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600; transition: all 0.3s;">
+                                        <i class="fa fa-info-circle"></i> Details
+                                    </a>
+                                    ` : ''}
+                                    <a href="${repo.html_url}" target="_blank" style="flex: 1; display: inline-block; padding: 12px 20px; background: linear-gradient(135deg, #34495e, #2c3e50); color: white; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600; transition: all 0.3s;">
+                                        <i class="fa fa-github"></i> GitHub
+                                    </a>
                                 </div>
                             </div>
                         </div>
